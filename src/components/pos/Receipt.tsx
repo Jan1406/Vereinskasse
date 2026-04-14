@@ -1,7 +1,6 @@
 import { ReceiptItem } from '@/types/pos';
 import { ReceiptItemRow } from './ReceiptItemRow';
-import { printReceipt } from './PrintableReceipt';
-import { ReceiptText, Trash2, CheckCircle, Printer } from 'lucide-react';
+import { ReceiptText, Trash2, CheckCircle } from 'lucide-react';
 
 interface ReceiptProps {
   items: ReceiptItem[];
@@ -59,27 +58,19 @@ export function Receipt({ items, onUpdateQuantity, onRemoveItem, onClear, onComp
         </div>
 
         {/* Action Buttons */}
-        <div className="flex gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           <button
             onClick={onClear}
             disabled={items.length === 0}
-            className="pos-button pos-button-destructive flex-1 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="pos-button pos-button-destructive w-full flex items-center justify-center gap-2 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Trash2 className="w-5 h-5" />
             Löschen
           </button>
           <button
-            onClick={() => printReceipt(items, total)}
-            disabled={items.length === 0}
-            className="pos-button flex-1 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed bg-muted hover:bg-muted/80 text-foreground"
-          >
-            <Printer className="w-5 h-5" />
-            Drucken
-          </button>
-          <button
             onClick={onComplete}
             disabled={items.length === 0}
-            className="pos-button pos-button-success flex-[2] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="pos-button pos-button-success w-full flex items-center justify-center gap-2 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <CheckCircle className="w-5 h-5" />
             Abschließen
