@@ -1,20 +1,28 @@
 import { Product } from '@/types/pos';
 
 export const products: Product[] = [
-  // Getränke
-  { id: 'bier', name: 'Bier', price: 3.00, category: 'drinks', icon: '🍺' },
-  { id: 'wein', name: 'Wein', price: 5.00, category: 'drinks', icon: '🍷' },
-  { id: 'weinschorle', name: 'Weinschorle', price: 5.00, category: 'drinks', icon: '🥂' },
-  { id: 'wasser', name: 'Wasser', price: 2.00, category: 'drinks', icon: '💧' },
-  { id: 'softdrink', name: 'Softdrink', price: 2.00, category: 'drinks', icon: '🥤' },
-  { id: 'apfelschorle', name: 'Apfelschorle', price: 2.00, category: 'drinks', icon: '🍎' },
-  
+  // Getränke – vom Fass (0,4 l)
+  { id: 'pils-fass', name: 'Pils vom Fass', price: 3.50, category: 'drinks', icon: '🍺' },
+  { id: 'radler-fass', name: 'Radler vom Fass', price: 3.50, category: 'drinks', icon: '🍺' },
+
+  // Getränke – aus der Flasche (0,33 l)
+  { id: 'pils-flasche', name: 'Pils Flasche', price: 3.00, category: 'drinks', icon: '🍾' },
+  { id: 'helles-flasche', name: 'Helles Flasche', price: 3.00, category: 'drinks', icon: '🍾' },
+  { id: 'radler-flasche', name: 'Radler Flasche', price: 3.00, category: 'drinks', icon: '🍾' },
+  { id: 'alkoholfrei-flasche', name: 'Alkoholfreies Bier', price: 3.00, category: 'drinks', icon: '🍾' },
+  { id: 'fassbrause-flasche', name: 'Fassbrause', price: 3.00, category: 'drinks', icon: '🍾' },
+  { id: 'kickers-sixer', name: 'Kickers Sixer', price: 15.00, category: 'drinks', icon: '📦' },
+
+  // Getränke – Sonstige
+  { id: 'weinschorle', name: 'Weinschorle (0,4)', price: 4.00, category: 'drinks', icon: '🥂' },
+  { id: 'capri-sun', name: 'Capri Sun', price: 1.00, category: 'drinks', icon: '🧃' },
+
   // Speisen
-  { id: 'fleischkaese', name: 'Fleischkäse', price: 4.00, category: 'food', icon: '🥪' },
-  { id: 'schupfnudeln', name: 'Schupfnudeln', price: 5.00, category: 'food', icon: '🍲' },
+  { id: 'fleischkaese', name: 'Fleischkäse im Brötchen', price: 4.00, category: 'food', icon: '🥪' },
+  { id: 'weisswuerste', name: 'Weißwürste mit Brezel', price: 5.00, category: 'food', icon: '🌭' },
   { id: 'pommes', name: 'Pommes', price: 3.00, category: 'food', icon: '🍟' },
-  { id: 'popcorn', name: 'Popcorn', price: 2.00, category: 'food', icon: '🍿' },
-  
+
   // Sonstiges
-  { id: 'pfand', name: 'Pfand', price: 2.00, category: 'other', icon: '🧾' },
+  { id: 'pfand-becher', name: 'Pfand Becher', price: 2.00, category: 'other', icon: '🥤' },
+  { id: 'pfand-flasche', name: 'Pfand Flasche', price: 1.00, category: 'other', icon: '🍾' },
 ];
